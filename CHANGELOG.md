@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 (2024-03-02)
+
+### Changes
+
+- Important changes.
+    
+
 ## 0.6.0 (2024-03-02)
 
 
