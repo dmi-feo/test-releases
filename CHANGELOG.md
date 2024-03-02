@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.9.0 (2024-03-02)
+
+### Changes
+
+- Some fixes.
+    
+- Some fixes.
+    
+- Some fixes.
+    
+- Some fixes.
+    
+- Some fixes.
+    
+- Some fixes.
+    
+
 ## 0.8.0 (2024-03-02)
 
 
