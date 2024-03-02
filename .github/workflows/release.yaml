@@ -1,0 +1,25 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        type: string
+        description: "Tag of the release to build"
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+          ref: ${{ github.event.inputs.release_tag }}
+
+      - name: "Commit changelog"
+        uses: loopwerk/tag-changelog@v1
+      - name: "Set tag on changelog"
+        run: git tag
+      - name: "Create release"
+      - name: "Build image"
