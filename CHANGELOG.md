@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased (2024-03-02)
+
+### Changes
+
+- Changelog settings.
+    
+- New fix.
+    
+- Changelog.
+    
+
 ## 0.2.0 (2024-03-02)
 
 ### Other
