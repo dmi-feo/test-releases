@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 (2024-03-02)
+
+### Changes
+
+- Very important commit.
+    
+
 ## 0.3.0 (2024-03-02)
 
 ### Changes
