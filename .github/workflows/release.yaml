@@ -30,3 +30,9 @@ jobs:
 
       - name: "Push it"
         run: git push --follow-tags
+
+      - name: "Build docker image"
+        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:sometag"
+
+      - name: "Push docker image"
+        run: docker push "ghcr.io/dmi-feo/test-releases:sometag"
