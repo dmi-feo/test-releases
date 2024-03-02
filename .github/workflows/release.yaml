@@ -27,4 +27,4 @@ jobs:
         run: make new-version-minor
 
       - name: "push it"
-        run: git push
+        run: git push --tags
