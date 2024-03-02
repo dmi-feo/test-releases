@@ -61,13 +61,7 @@ include_merges: false
 
 # Ignore commits whose summary line matches any of these regular expression patterns.
 ignore_patterns:
-  - '[@!]minor'
-  - '[@!]cosmetic'
-  - '[@!]refactor'
-  - '[@!]wip'
-  - ^$
-  - ^Merge branch
-  - ^Merge pull
+  - '[changelog-ignore]'
 
 # Set the commit's category metadata to the first classifier that returns ``True``.
 commit_classifiers:
