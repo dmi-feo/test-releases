@@ -19,7 +19,9 @@ jobs:
       - name: "setup reqs"
         run: pip install "bump-my-version==0.18.3" "generate-changelog==0.10.0"
 
-      - run: git config --global --add safe.directory /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}
+#      - run: git config --global --add safe.directory /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}
+      - run: git config --global user.email "you@example.com"
+      - run: git config --global user.name "Your Name"
 
       - name: "Bump version"
         run: make new-version-minor
