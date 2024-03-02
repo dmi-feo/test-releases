@@ -1,8 +1,23 @@
 # Changelog
 
+## 0.11.0 (2024-03-02)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.10.0...0.11.0)
+
+### Changes
+
+- Some fixes. [4694ed8](https://github.com/dmi-feo/test-releases/commit/4694ed89e2b866fa3cd943990a3405b34568012b)
+    
+- Version updated from 0.9.0 to 0.10.0. [b78af65](https://github.com/dmi-feo/test-releases/commit/b78af65a86478c542fe363fac01eba17f6bf091f)
+    
+- Forgotten templates. [c09ed62](https://github.com/dmi-feo/test-releases/commit/c09ed62f89b5b3354e2cafadf0f7681783fba4b6)
+    
+- Some fixes. [f8ea3a4](https://github.com/dmi-feo/test-releases/commit/f8ea3a40414b42084e538dfefde3febd58fc7410)
+    
+
 ## 0.10.0 (2024-03-02)
 
-[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.10.0...HEAD)
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.10.0...0.11.0)
 ### Changes
 
 - Forgotten templates. [c09ed62](https://github.com/dmi-feo/test-releases/commit/c09ed62f89b5b3354e2cafadf0f7681783fba4b6)
