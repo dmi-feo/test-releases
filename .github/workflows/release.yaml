@@ -26,5 +26,5 @@ jobs:
       - name: "Bump version"
         run: make new-version-minor
 
-      - name: "Create release"
-        uses: actions/create-release@latest
+      - name: "push it"
+        run: git push
