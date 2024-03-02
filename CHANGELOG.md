@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0 (2024-03-02)
+
+### Changes
+
+- New very useful commit.
+    
+- Add makefile.
+    
+
 ## 0.4.0 (2024-03-02)
 
 ### Changes
