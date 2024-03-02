@@ -10,6 +10,13 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: "setup reqs"
+        run: pip install "bump-my-version==0.18.3" "generate-changelog==0.10.0"
+
       - name: "Bump version"
         run: make new-version-minor
 
