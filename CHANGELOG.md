@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (2024-03-02)
+## 0.3.0 (2024-03-02)
 
 ### Changes
 
