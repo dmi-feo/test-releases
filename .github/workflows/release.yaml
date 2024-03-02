@@ -16,15 +16,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: "setup reqs"
+      - name: "Install requirements"
         run: pip install "bump-my-version==0.18.3" "generate-changelog==0.10.0"
 
-#      - run: git config --global --add safe.directory /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}
-      - run: git config --global user.email "you@example.com"
-      - run: git config --global user.name "Your Name"
+      - name: "Setup git"
+        run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
+
+      - name: "Generate changelog"
+        run: generate-changelog
 
       - name: "Bump version"
-        run: make new-version-minor
+        run: bump-my-version bump minor
 
-      - name: "push it"
+      - name: "Push it"
         run: git push --follow-tags
