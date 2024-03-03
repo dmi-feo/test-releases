@@ -41,8 +41,22 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "Build docker image"
-        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:sometag"
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/dmi-feo/test-releases
 
-      - name: "Push docker image"
-        run: docker push "ghcr.io/dmi-feo/test-releases:sometag"
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+#      - name: "Build docker image"
+#        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:sometag"
+#
+#      - name: "Push docker image"
+#        run: docker push "ghcr.io/dmi-feo/test-releases:sometag"
