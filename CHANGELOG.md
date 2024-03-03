@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.20.0 (2024-03-03)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.19.0...0.20.0)
+
+### Changes
+
+- Some fixes. [b1c78de](https://github.com/dmi-feo/test-releases/commit/b1c78de4150aed2f9b7ddc84217a6dc40abd015a)
+    
+
 ## 0.19.0 (2024-03-03)
 
 [Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.18.0...0.19.0)
