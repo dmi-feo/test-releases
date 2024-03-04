@@ -34,6 +34,9 @@ jobs:
       - name: "Bump version"
         run: bump-my-version bump minor
 
+      - name: "push the branch"
+        run: git push origin new-release  # TODO: branch name
+
       - name: "create pr"
         run: gh pr create --fill-first
         env:
