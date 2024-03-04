@@ -50,7 +50,7 @@ jobs:
           branch: new-version
 
       - name: merge pr
-        run: gh pr merge --merge --auto ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh pr merge --squash --rebase --auto ${{ steps.cpr.outputs.pull-request-number }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
