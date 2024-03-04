@@ -32,15 +32,16 @@ jobs:
         run: bump-my-version bump minor
 
       - name: "Store version number"
+        id: store_version
         run: |
-          echo "app_version=`git describe --tags --abbrev=0`" >> "$GITHUB_ENV"
+          echo "app_version=`git describe --tags --abbrev=0`" >> "GITHUB_OUTPUT"
 
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
-          title: "New version is coming: ${{ app_version }}"
-          branch: "new-version-${{ app_version }}"
+          title: "New version is coming: ${{ steps.store_version.outputs.app_version }}"
+          branch: "new-version-${{ steps.store_version.outputs.app_version }}"
 # TAG AND VERSION
       - name: merge pr
         run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
@@ -55,7 +56,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Build docker image"
-        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:$app_version"
+        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:${{ steps.store_version.outputs.app_version }}"
 
       - name: "Push docker image"
-        run: docker push "ghcr.io/dmi-feo/test-releases:$app_version"
+        run: docker push "ghcr.io/dmi-feo/test-releases:${{ steps.store_version.outputs.app_version }}"
