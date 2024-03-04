@@ -1,8 +1,38 @@
 # Changelog
 
+## 0.25.0 (2024-03-04)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.24.0...0.25.0)
+
+### Changes
+
+- Some fixes. [4452d79](https://github.com/dmi-feo/test-releases/commit/4452d79bfed439155ba5f4c49d2311b0987b41c6)
+    
+- Some fixes. [5b46bd4](https://github.com/dmi-feo/test-releases/commit/5b46bd45480efd4755b363e39821db6d39d624c1)
+    
+- Version updated from 0.23.0 to 0.24.0 (#5). [78e0cd6](https://github.com/dmi-feo/test-releases/commit/78e0cd693294299be85e4b2a2570d7fe18ea5f11)
+    
+  **co-authored-by:** Your Name <you@example.com>
+
+- Some fixes. [d08813a](https://github.com/dmi-feo/test-releases/commit/d08813a1fda6a0d784e144d58a9f988136aa38b9)
+    
+- Some fixes. [366696b](https://github.com/dmi-feo/test-releases/commit/366696b2ff662fad789e18395763c0cf7b29b2cb)
+    
+- Some fixes. [d5ed640](https://github.com/dmi-feo/test-releases/commit/d5ed6400cd10b9a6adcfc5f96b2efdbe5fa2ed0a)
+    
+- Some fixes. [83d18b7](https://github.com/dmi-feo/test-releases/commit/83d18b7ec08378c84dacdff80913eb9752d1646c)
+    
+- Up wf (#2). [36b1002](https://github.com/dmi-feo/test-releases/commit/36b10029e4dc621b37322ac1b0586c43287ab59c)
+    
+  * some fixes
+
+  * some fixes
+- Some fixes. [6d792f8](https://github.com/dmi-feo/test-releases/commit/6d792f87041e6ff5c0c0ae92252251fd2584feb8)
+    
+
 ## 0.24.0 (2024-03-04)
 
-[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.24.0...HEAD)
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.24.0...0.25.0)
 
 ### Changes
 
