@@ -23,7 +23,7 @@ jobs:
         run: pip install "bump-my-version==0.18.3" "generate-changelog==0.10.0"
 
       - name: "Setup git"
-        run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
+        run: git config --global user.email "root@localhost" && git config --global user.name "Bobby Brown Jr"
 
       - name: "Generate changelog"
         run: generate-changelog
@@ -40,7 +40,7 @@ jobs:
         with:
           title: "New version is coming: ${{ steps.tag.outputs.tag }}"
           branch: "new-version-${{ steps.tag.outputs.tag }}"
-# TAG AND VERSION
+
       - name: merge pr
         run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
         env:
@@ -50,6 +50,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           custom_tag: ${{ steps.tag.outputs.tag }}
+          tag_prefix: ""
 
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
