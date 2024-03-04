@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.31.0 (2024-03-04)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.30.0...0.31.0)
+
+### Changes
+
+- Some important fixes (#18). [4dc9260](https://github.com/dmi-feo/test-releases/commit/4dc9260bd0a4533911c70be6fbc1869c0dd87484)
+    
+- Version updated from 0.29.0 to 0.30.0 (#17). [44714ba](https://github.com/dmi-feo/test-releases/commit/44714ba21feaf98e1272fbf04897dc2c86c84fb6)
+    
+  **co-authored-by:** Bobby Brown Jr <root@localhost>
+
+
 ## 0.30.0 (2024-03-04)
 
 [Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.29.0...0.30.0)
