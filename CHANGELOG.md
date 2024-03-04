@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.30.0 (2024-03-04)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.29.0...0.30.0)
+
+### Changes
+
+- Update something.py (#16). [ec5f18d](https://github.com/dmi-feo/test-releases/commit/ec5f18d87f2bbe10dc4232aff864c86309683f6b)
+    
+- Some fixes (#15). [6ff9385](https://github.com/dmi-feo/test-releases/commit/6ff9385d6b56852657878c0e452d38ff7959ed0a)
+    
+- Version updated from 0.28.0 to 0.29.0 (#14). [aca70c9](https://github.com/dmi-feo/test-releases/commit/aca70c9b8e1ba4ad9753e2d63d4b96cce408b7ff)
+    
+  **co-authored-by:** Bobby Brown Jr <root@localhost>
+
+
 ## 0.29.0 (2024-03-04)
 
 [Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.24.0...HEAD)
