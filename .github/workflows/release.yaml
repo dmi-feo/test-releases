@@ -39,8 +39,8 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
-          title: "New version is coming: $app_version"
-          branch: new-version-$app_version
+          title: "New version is coming: ${{ app_version }}"
+          branch: "new-version-${{ app_version }}"
 # TAG AND VERSION
       - name: merge pr
         run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
