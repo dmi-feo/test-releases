@@ -25,8 +25,8 @@ jobs:
       - name: "Setup git"
         run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
 
-      - name: "Create git branch"
-        run: git checkout -b new-release  # TODO: branch name
+#      - name: "Create git branch"
+#        run: git checkout -b new-release  # TODO: branch name
 
       - name: "Generate changelog"
         run: generate-changelog
@@ -34,16 +34,18 @@ jobs:
       - name: "Bump version"
         run: bump-my-version bump minor
 
-      - name: "push the branch"
-        run: git push origin new-release  # TODO: branch name
+#      - name: "push the branch"
+#        run: git push origin new-release  # TODO: branch name
+#
+#      - name: "create pr"
+#        run: gh pr create --fill-first
+#        env:
+#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "create pr"
-        run: gh pr create --fill-first
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: "Push it"
-        run: git push --follow-tags
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          delete-branch: true
 
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
