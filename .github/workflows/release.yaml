@@ -42,7 +42,7 @@ jobs:
           branch: "new-version-${{ steps.tag.outputs.tag }}"
 
       - name: merge pr
-        run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
+        run: gh pr merge --squash --auto --admin ${{ steps.cpr.outputs.pull-request-number }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
