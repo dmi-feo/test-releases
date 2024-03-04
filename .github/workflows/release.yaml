@@ -33,15 +33,15 @@ jobs:
 
       - name: "Store version number"
         run: |
-          echo "version=`git describe --tags --abbrev=0`" >> "$GITHUB_ENV"
+          echo "app_version=`git describe --tags --abbrev=0`" >> "$GITHUB_ENV"
 
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
-          title: "New version is coming: $version"
-          branch: new-version-$version
-
+          title: "New version is coming: $app_version"
+          branch: new-version-$app_version
+# TAG AND VERSION
       - name: merge pr
         run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
         env:
@@ -55,7 +55,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Build docker image"
-        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:$version"
+        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:$app_version"
 
       - name: "Push docker image"
-        run: docker push "ghcr.io/dmi-feo/test-releases:$version"
+        run: docker push "ghcr.io/dmi-feo/test-releases:$app_version"
