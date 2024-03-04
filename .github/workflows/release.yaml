@@ -25,29 +25,22 @@ jobs:
       - name: "Setup git"
         run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
 
-#      - name: "Create git branch"
-#        run: git checkout -b new-release  # TODO: branch name
-
       - name: "Generate changelog"
         run: generate-changelog
 
       - name: "Bump version"
         run: bump-my-version bump minor
 
-#      - name: "push the branch"
-#        run: git push origin new-release  # TODO: branch name
-#
-#      - name: "create pr"
-#        run: gh pr create --fill-first
-#        env:
-#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Store version number"
+        run: |
+          echo "version=`git describe --tags --abbrev=0`" >> "$GITHUB_ENV"
 
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
-          title: New version is coming
-          branch: new-version
+          title: "New version is coming: $version"
+          branch: new-version-$version
 
       - name: merge pr
         run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
@@ -62,7 +55,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Build docker image"
-        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:`git describe --tags --abbrev=0`"
+        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:$version"
 
       - name: "Push docker image"
-        run: docker push "ghcr.io/dmi-feo/test-releases:`git describe --tags --abbrev=0`"
+        run: docker push "ghcr.io/dmi-feo/test-releases:$version"
