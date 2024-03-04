@@ -12,7 +12,7 @@ commit = true
 commit_args = "--no-verify"
 tag = true
 tag_name = "{new_version}"
-message = "Version updated from {current_version} to {new_version}"
+message = "Version updated from {current_version} to {new_version} [changelog-ignore]"
 allow_dirty = true
 
 [[tool.bumpversion.files]]
