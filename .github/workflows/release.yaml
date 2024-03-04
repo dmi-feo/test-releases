@@ -36,6 +36,8 @@ jobs:
 
       - name: "create pr"
         run: gh pr create --title "new release"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Push it"
         run: git push --follow-tags
