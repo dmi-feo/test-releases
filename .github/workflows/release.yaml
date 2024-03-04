@@ -35,7 +35,7 @@ jobs:
         run: bump-my-version bump minor
 
       - name: "create pr"
-        run: gh pr create --title "new release"
+        run: gh pr create --fill-first
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
