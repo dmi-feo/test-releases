@@ -25,11 +25,17 @@ jobs:
       - name: "Setup git"
         run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
 
+      - name: "Create git branch"
+        run: git checkout -b new-release  # TODO: branch name
+
       - name: "Generate changelog"
         run: generate-changelog
 
       - name: "Bump version"
         run: bump-my-version bump minor
+
+      - name: "create pr"
+        run: gh pr create --title "new release"
 
       - name: "Push it"
         run: git push --follow-tags
