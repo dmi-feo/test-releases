@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.24.0 (2024-03-04)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.24.0...HEAD)
+
+### Changes
+
+- Some fixes. [366696b](https://github.com/dmi-feo/test-releases/commit/366696b2ff662fad789e18395763c0cf7b29b2cb)
+    
+- Some fixes. [d5ed640](https://github.com/dmi-feo/test-releases/commit/d5ed6400cd10b9a6adcfc5f96b2efdbe5fa2ed0a)
+    
+- Some fixes. [83d18b7](https://github.com/dmi-feo/test-releases/commit/83d18b7ec08378c84dacdff80913eb9752d1646c)
+    
+- Up wf (#2). [36b1002](https://github.com/dmi-feo/test-releases/commit/36b10029e4dc621b37322ac1b0586c43287ab59c)
+    
+  * some fixes
+
+  * some fixes
+- Some fixes. [6d792f8](https://github.com/dmi-feo/test-releases/commit/6d792f87041e6ff5c0c0ae92252251fd2584feb8)
+    
+## 0.24.0 (2024-03-03)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.23.0...0.24.0)
+
+### Changes
+
+- Version updated from 0.23.0 to 0.24.0. [46aca5b](https://github.com/dmi-feo/test-releases/commit/46aca5b788a0250de6a17bfabffe2e189f589852)
+    
+- Merge pull request #1 from dmi-feo/pr1. [1722255](https://github.com/dmi-feo/test-releases/commit/1722255585216c5ed1a4887f46fbf7d15a49232e)
+    
+  some fixes
+- Some fixes. [8ec30de](https://github.com/dmi-feo/test-releases/commit/8ec30de95c914da060c81f6b0420a79d50f45930)
+    
+
 ## 0.23.0 (2024-03-03)
 
 [Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.22.0...0.23.0)
