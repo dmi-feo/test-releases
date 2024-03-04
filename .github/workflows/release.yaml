@@ -31,17 +31,15 @@ jobs:
       - name: "Bump version"
         run: bump-my-version bump minor
 
-      - name: "Store version number"
-        id: store_version
-        run: |
-          echo "app_version=`git describe --tags --abbrev=0`" >> "GITHUB_OUTPUT"
+      - id: tag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
 
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
-          title: "New version is coming: ${{ steps.store_version.outputs.app_version }}"
-          branch: "new-version-${{ steps.store_version.outputs.app_version }}"
+          title: "New version is coming: ${{ steps.tag.outputs.tag }}"
+          branch: "new-version-${{ steps.tag.outputs.tag }}"
 # TAG AND VERSION
       - name: merge pr
         run: gh pr merge --squash --auto ${{ steps.cpr.outputs.pull-request-number }}
@@ -56,7 +54,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Build docker image"
-        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:${{ steps.store_version.outputs.app_version }}"
+        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:${{ steps.tag.outputs.tag }}"
 
       - name: "Push docker image"
-        run: docker push "ghcr.io/dmi-feo/test-releases:${{ steps.store_version.outputs.app_version }}"
+        run: docker push "ghcr.io/dmi-feo/test-releases:${{ steps.tag.outputs.tag }}"
