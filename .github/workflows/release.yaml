@@ -53,7 +53,7 @@ jobs:
         run: git checkout main && git pull
 
       - name: "Set tag"
-        run: git tag ${{ steps.tag.outputs.tag }} && git push origin tag ${{ steps.tag.outputs.tag }}
+        run: git tag -d ${{ steps.tag.outputs.tag }} && git tag ${{ steps.tag.outputs.tag }} && git push origin tag ${{ steps.tag.outputs.tag }}
 
       # - name: "Log in to the Container registry"
       #   uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
