@@ -49,6 +49,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: to main and pull
+        run: git checkout main && git pull
+
       - name: "Set tag"
         uses: mathieudutour/github-tag-action@v6.1  # TODO: race condition?
         with:
@@ -56,15 +59,15 @@ jobs:
           custom_tag: ${{ steps.tag.outputs.tag }}
           tag_prefix: ""
 
-      - name: "Log in to the Container registry"
-        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+      # - name: "Log in to the Container registry"
+      #   uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+      #   with:
+      #     registry: ${{ env.REGISTRY }}
+      #     username: ${{ github.actor }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "Build docker image"
-        run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:${{ steps.tag.outputs.tag }}"
+      # - name: "Build docker image"
+      #   run: docker build . --platform linux/amd64 -t "ghcr.io/dmi-feo/test-releases:${{ steps.tag.outputs.tag }}"
 
-      - name: "Push docker image"
-        run: docker push "ghcr.io/dmi-feo/test-releases:${{ steps.tag.outputs.tag }}"
+      # - name: "Push docker image"
+      #   run: docker push "ghcr.io/dmi-feo/test-releases:${{ steps.tag.outputs.tag }}"
