@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.34.0 (2024-07-15)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.33.0...0.34.0)
+
+### Changes
+
+- Update release.yaml (#25). [64012dd](https://github.com/dmi-feo/test-releases/commit/64012ddb5d179e6d9cad6d33580da185bd8d5f4b)
+    
+- Update pyproject.toml (#24). [773ae82](https://github.com/dmi-feo/test-releases/commit/773ae823934ad70721894df9e1b5644bf019dd16)
+    
+
 ## 0.33.0 (2024-03-04)
 
 [Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.32.0...0.33.0)
