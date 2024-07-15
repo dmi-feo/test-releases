@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.33.0 (2024-03-04)
+
+[Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.32.0...0.33.0)
+
+
 ## 0.32.0 (2024-03-04)
 
 [Compare the full difference.](https://github.com/dmi-feo/test-releases/compare/0.31.0...0.32.0)
